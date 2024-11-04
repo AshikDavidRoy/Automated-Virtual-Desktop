@@ -59,23 +59,18 @@ def setup_virtual_desktops():
     time.sleep(1.5)
     open_website("https://gemini.google.com/app?hl=en-IN", new_window=False)  # Replace with your chat app's URL
     time.sleep(1.5)
+    
     # pyautogui.hotkey('shift','win', 'left')
 
-    # create_virtual_desktop()  # Create the third additional desktop
-    # open_website("https://www.codechef.com/")
-    # time.sleep(1.5)
-    # open_website("https://leetcode.com/", new_window=False)
-    # time.sleep(1.5)
+    create_virtual_desktop()  # Create the third additional desktop
+    open_website("https://www.codechef.com/")
+    time.sleep(1.5)
+    open_website("https://leetcode.com/", new_window=False)
+    time.sleep(1.5)
 
     create_virtual_desktop()  # Create the fourth additional desktop
-    open_website("https://github.com/AshikDavidRoy")  # Replace with your GitHub profile URL
+    open_website("https://github.com/<user-name>")  # Replace with your GitHub profile URL
     time.sleep(1.5)
-    # pyautogui.hotkey('shift','win', 'left')
-
-    # create_virtual_desktop()
-    # open_website("https://hianime.to/home")
-    # open_website("https://mangareader.to/home", new_window=False)
-    # time.sleep(2)
     for _ in range(5):
         pyautogui.hotkey('ctrl', 'win', 'left')
 
