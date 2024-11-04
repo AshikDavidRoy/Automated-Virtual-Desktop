@@ -1,6 +1,6 @@
 <!-- **README.md** -->
 
-**Project: Automated Virtual Desktop & Application Setup**
+# Project: Automated Virtual Desktop & Application Setup
 
 This Python script automates a streamlined workflow by setting up multiple virtual desktops and opening specific applications on each one.
 
