@@ -69,7 +69,7 @@ def setup_virtual_desktops():
     time.sleep(1.5)
 
     create_virtual_desktop()  # Create the fourth additional desktop
-    open_website("https://github.com/AshikDavidRoy")  # Replace with your GitHub profile URL
+    open_website("https://github.com/<username>")  # Replace with your GitHub profile URL
     time.sleep(1.5)
     # pyautogui.hotkey('shift','win', 'left')
 
