@@ -7,7 +7,7 @@ def open_app(app_path):
 
 # Function to open a website in a new Brave browser window
 def open_website(url, new_window=True):
-    brave_path = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
+    brave_path = r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" # Any other Browser path you prefer
     if new_window:
         # Open the URL in a new browser window
         subprocess.Popen([brave_path, '--new-window', url])
@@ -45,21 +45,21 @@ def setup_virtual_desktops():
     pyautogui.hotkey('ctrl', 'shift','alt', 'm')
     time.sleep(2)
     open_website("https://open.spotify.com/")
-    time.sleep(1.5)
-    # open_website("https://www.youtube.com/watch?v=-3HVtGXGNLg",new_window=False)
-    time.sleep(1.5) 
+    time.sleep(2)
     # pyautogui.hotkey('shift','win', 'left')
     time.sleep(3)
 
     create_virtual_desktop()  # Create the second additional desktop
-    # open_app(r'C:\\Users\\ashik\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe')  # Replace with your code editor's path
+    # open_app(r'code_editors_path.exe')  # Replace with your code editor's path
     pyautogui.hotkey('ctrl','shift','alt', 'v')
     time.sleep(3)
+    create_virtual_desktop()  # Create the additional desktop
     open_website("https://chatgpt.com/")  # Replace with your chat app's URL
-    time.sleep(1.5)
+    time.sleep(2)
     open_website("https://gemini.google.com/app?hl=en-IN", new_window=False)  # Replace with your chat app's URL
-    time.sleep(1.5)
-    
+    time.sleep(2)
+    open_website("https://chat.deepseek.com/")
+    time.sleep(2)
     # pyautogui.hotkey('shift','win', 'left')
 
     create_virtual_desktop()  # Create the third additional desktop
@@ -69,8 +69,10 @@ def setup_virtual_desktops():
     time.sleep(1.5)
 
     create_virtual_desktop()  # Create the fourth additional desktop
-    open_website("https://github.com/<user-name>")  # Replace with your GitHub profile URL
+    open_website("https://github.com/AshikDavidRoy")  # Replace with your GitHub profile URL
     time.sleep(1.5)
+    # pyautogui.hotkey('shift','win', 'left')
+
     for _ in range(5):
         pyautogui.hotkey('ctrl', 'win', 'left')
 
