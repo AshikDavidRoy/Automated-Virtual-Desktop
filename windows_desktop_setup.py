@@ -1,10 +1,10 @@
-
 import pyautogui
 import subprocess
 import time
 
 # Configuration
 BRAVE_PATH = r"C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+VS_CODE_PATH = r"C:\\Users\\user\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"  # VS Code path
 WEBSITES = {
     "Spotify": "https://open.spotify.com/",
     "ChatGPT": "https://chatgpt.com/",
@@ -55,29 +55,20 @@ def setup_virtual_desktops():
     remove_all_virtual_desktops()
     
     # Create desktops and open websites
-    
-    
-    pyautogui.hotkey('ctrl', 'shift','alt', 'm')
+    pyautogui.hotkey('ctrl', 'shift', 'alt', 'm')
     time.sleep(3)
     open_website(WEBSITES["Spotify"])
     time.sleep(2)
 
     create_virtual_desktop()
-    pyautogui.hotkey('ctrl','shift','alt', 'v')
-    time.sleep(5)
+    open_app(VS_CODE_PATH)  # Open VS Code
+    time.sleep(5)  # Give VS Code time to launch
+
     create_virtual_desktop()
     open_website(WEBSITES["ChatGPT"])
     time.sleep(2)
-    # open_website(WEBSITES["Gemini"], new_window=False)
-    # time.sleep(2)
     open_website(WEBSITES["DeepSeek"])
     time.sleep(2)
-
-    create_virtual_desktop()
-    open_website(WEBSITES["CodeChef"])
-    time.sleep(1)
-    open_website(WEBSITES["LeetCode"], new_window=False)
-    time.sleep(1)
 
     create_virtual_desktop()
     open_website(WEBSITES["GitHub"])
